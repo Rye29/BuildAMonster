@@ -68,9 +68,13 @@ class Monster extends Phaser.Scene {
         my.sprite.mouthSmile = this.add.sprite(this.mouthX, this.mouthY, "monsterParts", "mouthA.png");
         my.sprite.mouthSmile.visible = false;
 
+        my.sprite.accesory1 = this.add.sprite(this.eyeX+50, this.eyeY-20, "monsterParts", "detail_white_horn_small.png")
+        my.sprite.accesory2 = this.add.sprite(this.eyeX-50, this.eyeY-20, "monsterParts", "detail_white_horn_small.png")
+        my.sprite.accesory2.flipX = true;
+
         this.Sprite_list = [my.sprite.leftLeg, my.sprite.rightLeg, my.sprite.leftArm1, 
                             my.sprite.rightArm1, my.sprite.body, my.sprite.eye, 
-                            my.sprite.mouthClosed, my.sprite.mouthSmile];
+                            my.sprite.mouthClosed, my.sprite.mouthSmile, my.sprite.accesory1, my.sprite.accesory2];
 
         this.input.keyboard.on("keydown", function(event){
             switch(event.code){
